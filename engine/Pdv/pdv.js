@@ -1,5 +1,6 @@
-const SqliteStorage = require("../local_storage/sqlite");
-const PdvAPI = require("../server/pdv");
+const SqliteStorage = require("../../local_storage/sqlite");
+const PdvAPI = require("../../server/pdv");
+
 class PdvEngine {
 
   findAll() {

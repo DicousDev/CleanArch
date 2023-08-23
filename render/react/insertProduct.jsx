@@ -1,3 +1,4 @@
+import PdvModels from "../../engine/Pdv/pdvModels";
 import PdvEngine from "../../engine/pdv";
 
 export const InsertProduct = () => {
@@ -6,12 +7,7 @@ export const InsertProduct = () => {
   const [price, setPrice] = useState(null);
   
   function handlerInsert() {
-    const product = {
-      id: null,
-      name: name,
-      price: price
-    };
-
+    const product = PdvModels.createToSave(null, name, price);
     PdvEngine.save(product);
   }
 
